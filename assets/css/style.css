@@ -1,8 +1,9 @@
 /* Universal selectors first */
-/* none */
+/* Working on cursor
 * {
     cursor: url('/assets/cursor/pinkrose.png'), auto;
 }
+none */
 
 /* Element selectors */
 /* Body selector background image won't apply to inside of forms and buttons which universal would */
@@ -183,17 +184,4 @@ footer {
     font-size: 2rem;;
     /* purple dropshadow */
     filter: drop-shadow(5px 5px 2px #4444dd);
-}
-
-.confetti-item {
-    width: 10px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 10px;
-}
-.confetti {
-    position: fixed;
-    top: 0;
-    left: 0;
 }

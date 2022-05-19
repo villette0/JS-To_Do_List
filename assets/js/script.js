@@ -8,7 +8,8 @@ const filterOption = document.querySelector(".filter-todo");
 //variable which is get query.addeventlistener, on click, do function
 todoButton.addEventListener("click", addTodo);
 todoList.addEventListener("click", deleteCheck);
-filterOption.addEventListener("click", filterToDo);
+// must do change, not click. when the selection changes so you don't have to select then click
+filterOption.addEventListener("change", filterToDo);
 
 // Functions
 
