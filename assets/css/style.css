@@ -54,3 +54,70 @@ form button:hover {
     background: #4d10b0;
     color: white;
 }
+
+/* div class of container of unordered list */
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* unordered list */
+.todo-list {
+    min-width: 30%;
+    /* remove dots of unordered list */
+    list-style: none;
+}
+
+/* each list item within ul holding the p text, check button, and trash button */
+.todo-li {
+    display: flex;
+    /* another google font */
+    font-family: "Handlee", serif;
+    width: 40rem;
+    /* Creates gap between each li */
+    margin-bottom: 0.5rem;
+    background: white;
+    color: blue;
+    font-size: 1.5rem;
+    /* makes a space between each: p text, button, button */
+    justify-content: space-between;
+    /*horizontal center*/
+    align-items: center;
+    /*vertical center*/
+    /* If there is a change anywhere within, in this case the .completed, male a nice transition */
+    transition: all 0.5s ease;
+}
+
+/* could also go straight to .todo-list-item */
+.todo-li p {
+    /* pushes buttons to end of li box after p text*/
+    flex: 1;
+    padding: 0rem 0.5rem;
+}
+
+/* trash and checkmark */
+.trash-button,
+.complete-button {
+    background: rgb(255, 0, 166);
+    color: white;
+    border: none;
+    padding: 1rem;
+    /* hand pointer */
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.complete-button:hover {
+    background: limegreen;
+}
+
+.trash-button:hover {
+    background: red;
+}
+
+/* Make it so the actual icon of the trash and checkmark don't have separate functionaly from their little surrounding space */
+.fa-trash,
+.fa-check {
+    pointer-events: none;
+}
