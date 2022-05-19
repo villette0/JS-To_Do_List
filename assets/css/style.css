@@ -1,8 +1,56 @@
 /* Universal selectors first */
-* {
-    background-color: bisque;
-}
+/* none */
+
 /* Element selectors */
+/* Body selector background image won't apply to inside of forms and buttons which universal would */
+body {
+    /* use background image for gradients instead of background color */
+    background-image: linear-gradient(120deg, #f665ea, #61378a);
+    color: white;
+    min-height: 100vh;
+}
+
+
 header {
-    color:blue;
+    font-size: 5.5rem;
+    /* google font */
+    font-family: "Clicker Script", sans-serif;
+    /* purple dropshadow */
+    filter: drop-shadow(5px 5px 2px #4444dd);
+    margin-top: 50px;
+}
+
+header,
+form {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input {
+    width: 15rem;
+}
+
+form input,
+form button {
+    justify-content: center;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    color: blue;
+    border: none;
+    background: white;
+    font-family: "Handlee", serif;
+}
+
+form button {
+    color: #4d10b0;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    background: #4d10b0;
+    color: white;
 }
