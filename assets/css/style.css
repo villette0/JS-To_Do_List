@@ -8,7 +8,10 @@ body {
     background-image: linear-gradient(120deg, #f665ea, #61378a);
     color: white;
     min-height: 100vh;
+    cursor: grab;
 }
+
+/* url(/cursor/pinkrose.png), default; */
 
 
 header {
@@ -30,6 +33,10 @@ form {
 
 form input {
     width: 15rem;
+}
+
+form input:focus {
+    background-color: #e677df;
 }
 
 form input,
@@ -104,7 +111,7 @@ form button:hover {
     border: none;
     padding: 1rem;
     /* hand pointer */
-    cursor: pointer;
+    cursor: grab;
     font-size: 1rem;
 }
 

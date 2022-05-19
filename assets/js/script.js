@@ -109,3 +109,19 @@ function filterToDo(event) {
         } 
     }); 
 }
+
+// Saving to local storage so it doesn't all disappear
+function saveLocalTodos(todoItem) {
+    //Check if already have info in there
+    let todos;
+    //if there are no todos in storage then make an empty array
+    if (localStorage.getItem('todos') === null) {
+        todos = []; //an empty array
+    }
+    else {
+        //else i'm going to parse the item back into an array
+        todos = JSON.parse(localStorage.getItem('todos'));
+    }
+
+
+}
