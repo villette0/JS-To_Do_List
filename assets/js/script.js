@@ -8,6 +8,7 @@ const filterOption = document.querySelector(".filter-todo");
 //variable which is get query.addeventlistener, on click, do function
 todoButton.addEventListener("click", addTodo);
 todoList.addEventListener("click", deleteCheck);
+filterOption.addEventListener("click", filterToDo);
 
 // Functions
 
@@ -49,6 +50,7 @@ function addTodo(event) {
     todoInput.value="";
 }
 
+
 // When hitting each button on li item. First button is trash which we get by class, then second if statement is for checkmark
 function deleteCheck(event) {
     const item = event.target;
@@ -70,4 +72,40 @@ function deleteCheck(event) {
         // Apply the completed class to the parent element which is going to make the todo li transparent with a line through text
         todoDiv.classList.toggle('completed');
     }
+}
+
+
+
+//When filtering in the select dropdown click to see all, completed, or uncompleted todos 
+function filterToDo(event) {
+    const todos = todoList.childNodes;
+    //I named this child todoItem right now. It is not a variable from earlier. I am naming the child node basically
+    todos.forEach(function(todoItem) {
+        //on the "all" value, on the "completed" value etc in html under select>todos
+        switch (event.target.value) {
+            case "all":
+                // Did display flex because this is what we have in our css
+                todoItem.style.display = "flex";
+                break; //always put a break at end of case switches otherwise it messes up, freezes etc
+            case "completed":
+                // if the item contains a completed class
+                if(todoItem.classList.contains("completed")) {
+                    todoItem.style.display = "flex";
+                }
+                // make the others without the completed class not display
+                else {
+                    todoItem.style.display = "none";
+                } 
+                break;
+            case "uncompleted":
+                // ! means doesn't. so the item, which is the child of the ul list aka the divs, does not have a "completed" class assigned
+                if(!todoItem.classList.contains("completed")) {
+                    todoItem.style.display = "flex";
+                }
+                else {
+                    todoItem.style.display = "none";
+                } 
+                break;
+        } 
+    }); 
 }

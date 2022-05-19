@@ -134,3 +134,48 @@ form button:hover {
     text-decoration: line-through;
     opacity: 0.5;
 }
+
+/* the container div of the select button and selections */
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* the element that contains the three options will be pink with white text */
+select {
+    color:white;
+    background-color: #e677df;
+    width: 10rem;
+    cursor: pointer;
+    padding: .5rem;
+}
+
+/* Adds dropdown arrow to right */
+.select::after {
+    content: "\25BC";  /* dropdown arrow*/
+    position: absolute;
+    background:#4d10b0;
+    top:0;
+    right: 0;
+    padding: .6rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+/* making changes to the after element, the arrow, on hover */
+.select:hover::after {
+    background: white;
+    color: #4d10b0;
+}
+
+/* flower icon at footer */
+footer {
+    display:flex;
+    justify-content: center;
+    margin-top: 15rem;
+    margin-bottom: 7rem;
+    font-size: 2rem;;
+    /* purple dropshadow */
+    filter: drop-shadow(5px 5px 2px #4444dd);
+}
