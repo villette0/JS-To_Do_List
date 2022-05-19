@@ -7,7 +7,7 @@ const filterOption = document.querySelector(".filter-todo");
 // Event Listeners
 //variable which is get query.addeventlistener, on click, do function
 todoButton.addEventListener("click", addTodo);
-
+todoList.addEventListener("click", deleteCheck);
 
 // Functions
 
@@ -47,4 +47,27 @@ function addTodo(event) {
     // clear to do input form value after adding to list
     }
     todoInput.value="";
+}
+
+// When hitting each button on li item. First button is trash which we get by class, then second if statement is for checkmark
+function deleteCheck(event) {
+    const item = event.target;
+    // Delete Todo list item
+    if (item.classList[0]=== "trash-button") {
+        // remove parent item of trash button, which is the todo li specific to that pressed button, not just any todo li. 
+        const todoLi = item.parentElement;
+        // Animation
+        todoLi.classList.add("fall");
+        // Delete todoLi when animation is over. Meaning after its class has transitioned from one class to another. so instead of on "click" it's on "transitionend"
+        todoDiv.addEventListener("transitionend", function() {
+            todoDiv.remove();
+        });
+    }        
+    
+    // if checkmark is pressed on complete button, apply completed class
+    if(item.classList[0] === "complete-button") {
+        const todoDiv = item.parentElement;
+        // Apply the completed class to the parent element which is going to make the todo li transparent with a line through text
+        todoDiv.classList.toggle('completed');
+    }
 }

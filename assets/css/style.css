@@ -121,3 +121,16 @@ form button:hover {
 .fa-check {
     pointer-events: none;
 }
+
+/* When the trash button is clicked, the item transitions by moving down, rotating, and going transparent. Then a separate action after deletes/removes it in the function */
+.fall {
+    /* down the y axis by 8 and rotated right 20 degrees */
+    transform: translateX(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+/* When the checkmark is clicked, this is toggled in a function on js */
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
