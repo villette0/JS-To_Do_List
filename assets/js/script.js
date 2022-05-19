@@ -61,16 +61,16 @@ function deleteCheck(event) {
         // Animation
         todoLi.classList.add("fall");
         // Delete todoLi when animation is over. Meaning after its class has transitioned from one class to another. so instead of on "click" it's on "transitionend"
-        todoDiv.addEventListener("transitionend", function() {
-            todoDiv.remove();
+        todoLi.addEventListener("transitionend", function() {
+            todoLi.remove();
         });
     }        
     
     // if checkmark is pressed on complete button, apply completed class
     if(item.classList[0] === "complete-button") {
-        const todoDiv = item.parentElement;
+        const todoLi = item.parentElement;
         // Apply the completed class to the parent element which is going to make the todo li transparent with a line through text
-        todoDiv.classList.toggle('completed');
+        todoLi.classList.toggle('completed');
     }
 }
 
@@ -111,6 +111,7 @@ function filterToDo(event) {
 }
 
 // Saving to local storage so it doesn't all disappear
+/*
 function saveLocalTodos(todoItem) {
     //Check if already have info in there
     let todos;
@@ -122,6 +123,5 @@ function saveLocalTodos(todoItem) {
         //else i'm going to parse the item back into an array
         todos = JSON.parse(localStorage.getItem('todos'));
     }
-
-
 }
+*/

@@ -1,5 +1,8 @@
 /* Universal selectors first */
 /* none */
+* {
+    cursor: url('/assets/cursor/pinkrose.png'), auto;
+}
 
 /* Element selectors */
 /* Body selector background image won't apply to inside of forms and buttons which universal would */
@@ -7,12 +10,7 @@ body {
     /* use background image for gradients instead of background color */
     background-image: linear-gradient(120deg, #f665ea, #61378a);
     color: white;
-    min-height: 100vh;
-    cursor: grab;
 }
-
-/* url(/cursor/pinkrose.png), default; */
-
 
 header {
     font-size: 5.5rem;
@@ -93,7 +91,7 @@ form button:hover {
     align-items: center;
     /*vertical center*/
     /* If there is a change anywhere within, in this case the .completed, male a nice transition */
-    transition: all 0.5s ease;
+    transition: all .5s ease;
 }
 
 /* could also go straight to .todo-list-item */
@@ -185,4 +183,17 @@ footer {
     font-size: 2rem;;
     /* purple dropshadow */
     filter: drop-shadow(5px 5px 2px #4444dd);
+}
+
+.confetti-item {
+    width: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 10px;
+}
+.confetti {
+    position: fixed;
+    top: 0;
+    left: 0;
 }
