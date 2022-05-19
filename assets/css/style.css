@@ -1,9 +1,17 @@
 /* Universal selectors first */
-/* Working on cursor
+
+/* The third option besides pasting into the html file, is you can add the cursor into the universal selector of css. It doesn't work if we put a dot before asset when accessing from the css file. */
+/* First here is the url from our folder */
+/*
 * {
-    cursor: url('/assets/cursor/pinkrose.png'), auto;
+    cursor: url('/assets/cursor/pinkrose32.png'), auto !important;
 }
-none */
+*/
+/* Next here is the url from the Cursors4u website if we wanted to use that */
+* {
+    cursor: url(https://ani.cursors-4u.net/symbols/sym-8/sym752.cur), auto !important;
+} 
+
 
 /* Element selectors */
 /* Body selector background image won't apply to inside of forms and buttons which universal would */
