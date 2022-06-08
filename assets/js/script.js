@@ -120,28 +120,20 @@ function filterToDo(event) {
     });
 }
 
+// For the array in localStorage
+var todos;
+
 // Saving to local storage so it doesn't all disappear
 function saveLocalTodos(todoItem) {
-    //Check if already have info in there
-    let todos;
-    //if there are no todos in storage then make an empty array
-    if (localStorage.getItem('todos') === null) {
-        todos = []; //an empty array
-    }
-    else {
-        //else if there are todos then get them from the json object
-        todos = JSON.parse(localStorage.getItem('todos'));
-    }
-    //then push the todo item into the blank array
+    //Push the todo item into the blank array
     todos.push(todoItem);
     localStorage.setItem('todos', JSON.stringify(todos));
 }
 
 //Populate list from localstorage
 function getTodos() {
-    //Check if already have info in there
-    let todos;
-    //if there are no todos in storage then make an empty array
+    //Checking if already have info in there
+    //If there are no todos in storage then make an empty array
     if (localStorage.getItem('todos') === null) {
         todos = []; //an empty array
     }
