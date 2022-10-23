@@ -17,17 +17,18 @@
 /* Body selector background image won't apply to inside of forms and buttons which universal would */
 body {
     /* use background image for gradients instead of background color */
-    background-image: linear-gradient(120deg, #f665ea, #61378a);
+    background-image: linear-gradient(120deg, #d5ccb9, #ada080);
     color: white;
 }
 
 header {
     font-size: 5.5rem;
     /* google font */
-    font-family: "Clicker Script", sans-serif;
+    font-family: "Special Elite", sans-serif;
     /* purple dropshadow */
-    filter: drop-shadow(5px 5px 2px #4444dd);
-    margin-top: 50px;
+    filter: drop-shadow(1px 1px 1px #6b462b);
+    margin-top: 20vh;
+    color: black;
 }
 
 header,
@@ -38,12 +39,17 @@ form {
     align-items: center;
 }
 
+form {
+    margin-top: 3vh;
+}
+
 form input {
     width: 15rem;
 }
 
 form input:focus {
-    background-color: #e677df;
+    background-color: #dbd6ca;
+    outline: none;
 }
 
 form input,
@@ -58,14 +64,14 @@ form button {
 }
 
 form button {
-    color: #4d10b0;
+    color: rgb(81, 76, 76);
     background: white;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 form button:hover {
-    background: #4d10b0;
+    background: black;
     color: white;
 }
 
@@ -87,12 +93,12 @@ form button:hover {
 .todo-li {
     display: flex;
     /* another google font */
-    font-family: "Handlee", serif;
+    font-family: 'Montserrat Alternates', sans-serif;
     width: 40rem;
     /* Creates gap between each li */
     margin-bottom: 0.5rem;
     background: white;
-    color: blue;
+    color: black;
     font-size: 1.5rem;
     /* makes a space between each: p text, button, button */
     justify-content: space-between;
@@ -113,7 +119,7 @@ form button:hover {
 /* trash and checkmark */
 .trash-button,
 .complete-button {
-    background: rgb(255, 0, 166);
+    background: rgb(59, 43, 48);
     color: white;
     border: none;
     padding: 1rem;
@@ -123,11 +129,11 @@ form button:hover {
 }
 
 .complete-button:hover {
-    background: limegreen;
+    background: rgb(93, 128, 93);
 }
 
 .trash-button:hover {
-    background: red;
+    background: rgb(186, 75, 75);
 }
 
 /* Make it so the actual icon of the trash and checkmark don't have separate functionaly from their little surrounding space */
@@ -159,7 +165,7 @@ form button:hover {
 /* the element that contains the three options will be pink with white text */
 select {
     color:white;
-    background-color: #e677df;
+    background-color: rgb(81, 76, 76);
     width: 10rem;
     cursor: pointer;
     padding: .5rem;
@@ -169,7 +175,7 @@ select {
 .select::after {
     content: "\25BC";  /* dropdown arrow*/
     position: absolute;
-    background:#4d10b0;
+    background:black;
     top:0;
     right: 0;
     padding: .6rem;
@@ -180,16 +186,5 @@ select {
 /* making changes to the after element, the arrow, on hover */
 .select:hover::after {
     background: white;
-    color: #4d10b0;
-}
-
-/* flower icon at footer */
-footer {
-    display:flex;
-    justify-content: center;
-    margin-top: 15rem;
-    margin-bottom: 7rem;
-    font-size: 2rem;;
-    /* purple dropshadow */
-    filter: drop-shadow(5px 5px 2px #4444dd);
+    color: black;
 }
